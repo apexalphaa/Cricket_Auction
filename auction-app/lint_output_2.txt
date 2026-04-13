@@ -1,0 +1,26 @@
+﻿
+> auction-app@0.0.0 lint
+> eslint .
+
+
+C:\Users\11qms\Desktop\Auction\auction-app\scripts\updatePhotos.js
+  61:13  error  'process' is not defined  no-undef
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\components\WaitingScreen.jsx
+  2:10  error  'useAuction' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\contexts\AuctionContext.jsx
+  8:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\contexts\AuthContext.jsx
+  10:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\pages\AdminDashboard.jsx
+   1:17  error    'useState' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                               no-unused-vars
+  59:8   warning  React Hook useEffect has missing dependencies: 'adminSoldPlayer', 'adminUnsoldPlayer', and 'updateTimer'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\pages\OwnerDashboard.jsx
+  3:10  error  'useAuth' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 7 problems (6 errors, 1 warning)
+

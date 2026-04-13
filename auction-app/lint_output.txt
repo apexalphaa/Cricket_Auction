@@ -1,0 +1,63 @@
+﻿
+> auction-app@0.0.0 lint
+> eslint .
+
+
+C:\Users\11qms\Desktop\Auction\auction-app\scripts\updatePhotos.js
+  60:13  error  'process' is not defined  no-undef
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\components\WaitingScreen.jsx
+  5:13  error  'currentPlayer' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\contexts\AuctionContext.jsx
+   3:24  error  'set' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+   8:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-refresh/only-export-components
+  82:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  80 |     useEffect(() => {
+  81 |         if (!auctionState.current_player_id) {
+> 82 |             setCurrentPlayer(null);
+     |             ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  83 |             return;
+  84 |         }
+  85 |  react-hooks/set-state-in-effect
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\contexts\AuthContext.jsx
+   4:20  error  'set' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                      no-unused-vars
+  10:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\pages\AdminDashboard.jsx
+  36:12  error    'searchTerm' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+  36:24  error    'setSearchTerm' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  40:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  38 |     // Sync with global timer
+  39 |     useEffect(() => {
+> 40 |         setLocalTimer(auctionState.timer);
+     |         ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  41 |     }, [auctionState.timer]);
+  42 |
+  43 |     // Timer Interval (Local driver for Admin)  react-hooks/set-state-in-effect
+  66:8   warning  React Hook useEffect has missing dependencies: 'adminSoldPlayer', 'adminUnsoldPlayer', 'auctionState.current_bidder_team_id', and 'updateTimer'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/exhaustive-deps
+  98:11  error    'unsoldPlayers' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             no-unused-vars
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\pages\OwnerDashboard.jsx
+  8:13  error  'currentUser' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\11qms\Desktop\Auction\auction-app\src\pages\PublicView.jsx
+  1:27  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 14 problems (13 errors, 1 warning)
+

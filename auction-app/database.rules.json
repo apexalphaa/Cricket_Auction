@@ -1,0 +1,17 @@
+{
+    "rules": {
+        ".read": true,
+        ".write": true,
+        "teams": {
+            ".indexOn": [
+                "name"
+            ]
+        },
+        "users": {
+            "$uid": {
+                ".read": "$uid === auth.uid || root.child('users/'+auth.uid+'/role').val() === 'admin'",
+                ".write": "$uid === auth.uid || root.child('users/'+auth.uid+'/role').val() === 'admin'"
+            }
+        }
+    }
+}
